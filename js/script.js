@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  /* ===== 슬라이더 ===== */
   let count = 0;
 
   setInterval(function(){
@@ -12,13 +13,8 @@ $(document).ready(function(){
     );
   }, 2500);
 
-});
 
-$(document).ready(function(){
-
-  // 슬라이더 (이미 있음)
-
-  // 탭메뉴
+  /* ===== 탭메뉴 ===== */
   $(".tab_menu li").click(function(){
     let idx = $(this).index();
 
