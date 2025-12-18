@@ -112,20 +112,13 @@ a{text-decoration:none; color:#333;}
   justify-content:center;
   align-items:center;
 }
-.hero_bg1{background:linear-gradient(180deg,#4f59a8,#3b2e6b);}
-.hero_bg2{background:linear-gradient(180deg,#6c7cff,#4b2a7a);}
-.hero_bg3{background:linear-gradient(180deg,#ff7ab6,#7a1f44);}
+
+.hero_bg1{background:url("../img/hero_bg1.png") center/cover no-repeat;}
+.hero_bg2{background:url("../img/hero_bg2.jpg") center/cover no-repeat;}
+.hero_bg3{background:url("../img/hero_bg3.png") center/cover no-repeat;}
 .hero_txt{
   text-align:center;
   color:#fff;
-}
-.hero_txt h2{
-  font-size:44px;
-  margin-bottom:12px;
-}
-.hero_txt p{
-  font-size:16px;
-  opacity:.9;
 }
 
 /* hero dots */
@@ -184,10 +177,22 @@ a{text-decoration:none; color:#333;}
   line-height:1.6;
 }
 
+/* ===== goods card image fix ===== */
+.card img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:12px;
+}
+
+
 /* ===== stats ===== */
 .stat4{
   display:flex;
   gap:18px;
+  width: 150%;
+  height:80%;
 }
 .stat{
   flex:1;
@@ -228,14 +233,31 @@ a{text-decoration:none; color:#333;}
   padding:18px;
   color:#fff;
 }
-.port_a{background:linear-gradient(180deg,#6c7cff,#2d2357);}
-.port_b{background:linear-gradient(180deg,#ff86d7,#6b1830);}
+.port{
+  position:relative;
+  overflow:hidden;
+}
+
+.port::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+  z-index:1;
+}
+.port_a{background:url("../img/port1.webp") center/cover no-repeat;}
+.port_b{background:url("../img/port2.jpg") center/cover no-repeat;}
 .port_txt h4{
   margin-bottom:8px;
+  position: relative;
+  z-index: 2;
 }
+
 .port_txt p{
   font-size:13px;
   opacity:.9;
+  position: relative;
+  z-index: 2;
 }
 
 /* ===== cta ===== */
@@ -417,3 +439,25 @@ a{text-decoration:none; color:#333;}
   line-height:1.7;
   color:#555;
 }
+
+/* ===== ranking ===== */
+.rank_card{
+  position:relative;
+}
+
+.rank_num{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#1f5eff;
+  color:#fff;
+  font-weight:bold;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:14px;
+}
+
